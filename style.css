@@ -1,0 +1,188 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 6px 0;
+}
+
+/* div container geral */
+#div-body {
+    width: 70%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/* nav e elementos filhos */
+nav {
+    width: 100%;
+    background-color: navy;
+    padding: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 12px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: yellow;
+}
+
+.nav-link:active {
+    color: #c9c9c9;
+}
+/* *** */
+
+/* classe seções e elementos filhos */
+.secoes {
+    display: none;
+    padding: 10px 0px;
+    width: 100%;            
+    height: 400px;            
+}
+
+.secoes h2 {
+    width: 100%;
+    margin-bottom: 36px;
+    background: #E4E4E4;
+    padding: 6px;
+}
+
+.secoes h3 {
+    width: 100%;
+    color: rgb(0, 0, 179);
+    border-bottom: 2px solid #E4E4E4;
+    margin-bottom: 12px;
+    padding: 0;
+}
+/* *** */
+
+
+/* elementos diversos */
+p {
+    margin-bottom: 5px;
+}
+
+#portfolio .div-meusdados p {
+    margin-left: 10px;
+}
+
+.div-flex {
+    display: flex;    
+}
+
+.div-flex div {
+    padding-right: 20px;
+}
+
+.div-foto {
+    width: 250px;
+}
+
+.passatempo {
+    margin-left: 16px;
+}
+
+.passatempo tr td {
+    width: 110px;
+}
+
+.titulo {
+    color: rgb(0, 0, 179);
+}
+/* *** */
+
+/* formulário de contato e elementos filhos */
+#form-contato {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#form-contato input[type=text], #form-contato input[type=email], textarea {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 16px;
+    padding: 4px;
+    border: 1px solid #E4E4E4;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#form-contato textarea {
+    height: auto;
+}
+
+#form-contato input[type=submit] {
+    padding: 4px 10px;
+    background-color: #d4d4d4;
+    border: 1px solid #E4E4E4;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+#form-contato input[type=submit]:hover {
+    background-color: #ececec;
+} 
+/* *** */
+
+/* Tornar invisível uma div de classe secoes */
+.setVisible {
+    display: block;
+}
+
+/* responsividade */
+@media screen and (max-width: 480px) {
+    #div-body {
+        width: 98%;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    .div-flex {
+        flex-direction: column;
+
+    }
+
+    .div-flex div {
+        padding-right: 0px;
+    }
+
+    .div-foto {        
+        margin: 0 auto;
+    }
+
+    .div-meusdados {
+        margin-top: 12px;
+        padding-left: 10px;
+    }
+
+    #form-contato {
+        width: 90%;
+    }    
+
+    .passatempo tr td {
+        font-size: 13px;
+    }    
+
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Curriculum Vitae online</h1>
+    </header>
+
+    <div id="div-body">
+
+        <!-- menu de navegação -->
+        <nav>
+            <ul>
+                <li><a name="sobremim" class="nav-link" href="#">Sobre mim</a></li>
+                <li><a name="formacao" class="nav-link" href="#">Formação</a></li>
+                <li><a name="portfolio" class="nav-link" href="#">Portfólio</a></li>
+                <li><a name="contato" class="nav-link" href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- todas as divs carregadas conforme o menu são da classe secoes -->
+        <!-- somente div sobremim inicia com status visível -->
+        <div id="sobremim" class="secoes setVisible">
+            <h2>Sobre mim</h2>
+            <div class="div-flex">
+                <div class="div-foto">
+                    <img src="foto.png" alt="" width="100%">
+                </div>
+                <div class="div-meusdados">
+                    <p><b>Nome:</b> Gustavo José de Souza Moraes</p>
+                    <p><b>Idade:</b> 52 anos</p>
+                    <p><b>Data de nascimento:</b> 14/12/1972</p>
+                    <p><b>Naturalidade:</b> Recife-PE</p>
+                    <p><b>Fone:</b> (81) 99609-7172 <img src="wzap.png" width="18px"></p>
+                    <p><b>Escolaridade:</b> Superior completo</p>
+                    <p><b>Passatempos e interesses:</b></p>
+
+                    <table class="passatempo">
+                        <tr>
+                            <td>&check; Ler</td>
+                            <td>&check; Escrever</td>
+                            <td>&check; Aprender</td>
+                            <td>&check; Viajar</td>
+                        </tr>
+                        <tr>
+                            <td>&check; Família</td>
+                            <td>&check; Cinema</td>
+                            <td>&check; Música</td>
+                            <td>&check; Games</td>
+                        </tr>
+                        <tr>
+                            <td>&check; Amigos</td>
+                            <td>&check; Balada</td>
+                            <td>&check; Gastronomia</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- div formacao -->
+        <div id="formacao" class="secoes">
+            <h2>Formação</h2>
+            <div class="div-flex">
+                <div class="div-foto">
+                    <img src="formatura.png" alt="" width="100%">
+                </div>
+                <div class="div-meusdados">
+                    <h4>CPOR/Recife &rArr; <span class="titulo">Oficial do Exército de 2a. Classe</span></h4>
+                    <h4>Escola Técnica de Fortaleza &rArr; <span class="titulo">Técnico em Informática</span></h4>
+                    <h4>Universidade Católica de Pernambuco &rArr; <span class="titulo">Licenciatura Plena em Ciências Biológicas</span></h4>
+                    <h4>Uninter &rArr; <span class="titulo">Matemática - 2a. Licenciatura</span></h4>
+                    <h4>UFPE &rArr; <span class="titulo">Ciências Contábeis (em curso)</span></h4>
+                    <h4>Uninter &rArr; <span class="titulo">CST Análise e Desenvolvimento de Sistemas (em curso)</span></h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- div portfolio -->
+        <div id="portfolio" class="secoes">
+            <h2>Portfólio</h2>
+            <div class="div-flex">
+                <div class="div-foto">
+                    <img src="fold.png" alt="" width="100%">
+                </div>
+                <div class="div-meusdados">
+                    <h3>Área Pedagógica</h3>
+                    <p>&rArr; Professor de Biologia do Ensino Médio</p>
+                    <p>&rArr; Professor de Biologia de Cursos Preparatórios para ENEM e similares</p>
+
+                    <br>
+
+                    <h3>Área de Tecnologia</h3>
+                    <p>&rArr; Programador desde 1995</p>
+                    <p>&rArr; Sistema para Loja de Veículos Usados</p>
+                    <p>&rArr; Sistema Corporativo de Automação de Concessionárias - Módulos Financeiros</p>
+                    <p>&rArr; Sistema de Gestão Escolar</p>
+
+                    <br>
+
+                    <h3>Projetos em fase de implementação</h3>
+                    <p>&rArr; Desenvolvimento de site na Área de Educação</p>
+                    <p>&rArr; Canal do Youtube Educacional para Matérias Escolares</p>
+                    <p>&rArr; Canal do Youtube Educacional para Desenvolvimento de Sistemas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- div contato -->
+        <div id="contato" class="secoes">
+            <h2>Contato</h2>
+            <form id="form-contato" action="">
+                <label for="text-nome">Seu nome:</label>
+                <input type="text" id="text-nome">
+    
+                <label for="text-email">Seu email:</label>
+                <input type="email" id="text-email">
+    
+                <label for="mensagem">Sua mensagem:</label>
+                <textarea id="mensagem" rows="10"></textarea>
+                
+                <input type="submit" value="Enviar mensagem">
+            </form>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener("click", (e) => {
+            // verifica se o elemento clicado pertence a classe nav-link (menu de navegação)
+            if (e.target.className == "nav-link") { 
+                // captura as divs da classe secoes
+                let links = document.querySelectorAll(".secoes") 
+                links.forEach(link => {
+                    // remove a classe de visibilidade para ocultar todas as divs secoes
+                    link.classList.remove("setVisible") 
+                })
+                // exibe somente a div conforme o item clicado 
+                // relaciona nome do link clicado com o id da div
+                document.getElementById(e.target.name).classList.add("setVisible") 
+            }
+        })
+    </script>
+</body>
+</html>
